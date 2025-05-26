@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* sağa taşmayı engeller */
+}
+
+
+img {
+    max-width: 25%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c5c43;
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(to right, #A4B465, #1f7d53);
+    padding: 16px 0;
+    box-shadow: 0 4px 12px rgba(41, 6, 147, 0.2);
+    border-bottom: 2px solid #0e3e26;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    border-radius: 25px;
+
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+
+.topnav a.active {
+    background-color: #ffffff33;
+    color: #250375;
+    font-weight: bold;
+    border: 2px solid white;
+}
+
+
+
+.image-container {
+    margin: 0%;
+    display: flex;
+    width: 200%;
+    height: 100vh; /* ekranın tüm yükesekliği */
+}
+
+.image-container img {
+    margin: 0%;
+    width: 200%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+.hero {
+    height: 100vh;
+    background: url('your-background-image.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* karartma efekti */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    font-size: 20px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text {
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-text h1:hover {
+    animation: bounceIn 0.6s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.hero-text p:hover {
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} /* P etiketi için kullanıldı*/
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
